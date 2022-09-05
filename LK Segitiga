@@ -1,0 +1,51 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+
+ class LKSegitiga
+ {
+    int alas, tinggi, sisi;
+
+    public LKSegitiga(int alas, int tinggi, int sisi) 
+    {
+        this.alas = alas;
+        this.tinggi = tinggi;
+        this.sisi = sisi;
+    }
+
+    public double Keliling() 
+    {
+        int keliling = this.alas + (2 * this.sisi);
+        return keliling;
+    }
+    public double Luas() 
+    {
+        Double LuasSegitiga =  this.alas * this.tinggi * 0.5 ;
+        return LuasSegitiga;
+    }
+
+    public static void main(String[] args) {
+        Scanner myScanner = new Scanner(System.in);
+
+        int alas = myScanner.nextInt();
+        int tinggi = myScanner.nextInt();
+        int sisi = myScanner.nextInt();
+       LKSegitiga lksegitiga = new LKSegitiga(alas, tinggi, sisi);
+        if(alas <= 0) 
+        {
+        System.out.println("INVALID");
+        } else if (tinggi <= 0) 
+        {
+        System.out.println("INVALID");
+        }else if (sisi <=0) 
+        {
+        System.out.println("INVALID");
+        }
+        else 
+        {
+            System.out.println("Keliling Segitiga : " +lksegitiga.Keliling()); 
+            System.out.println("Luas Segitiga : " +lksegitiga.Luas());
+        }
+        myScanner.close();
+    }
+}
