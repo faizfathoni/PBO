@@ -1,0 +1,29 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+public class Kubus 
+{
+    int sisiKubus = 5;
+    public Double hitungVolume() 
+    {
+        double volume = 0.0;
+        // tambahkan code untuk menghitung volume kubus
+        volume = Math.pow((double) this.sisiKubus, 3);
+        return volume;
+    }
+    public int hitungLuasPermukaan() 
+    {
+        int luasPermukaan = 0;
+        luasPermukaan = 6 * this.sisiKubus * this.sisiKubus;
+        return luasPermukaan;
+    }
+    public static void main(String[] args) 
+    {
+        Kubus kubus = new Kubus();
+        kubus.sisiKubus = 25;
+        System.out.println("Sisi,Luas Permukaan,dan Volum Kubus: \n");
+        System.out.println("\n Sisi           : " + kubus.sisiKubus);
+        System.out.println("\n Luas Permukaan : " + kubus.hitungLuasPermukaan());
+        System.out.println("\n Volume         : " + kubus.hitungVolume());
+    }
+}
